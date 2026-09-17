@@ -73,4 +73,4 @@ formulario.addEventListener("submit", function (evento) {
     inputCantidad.classList.remove("input-valido");
     inputPrecio.classList.remove("input-valido");
   }
-});
+})
