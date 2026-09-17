@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparar e imprimir</title>
+</head>
+<body>
+    <h1>Mas alto de los 3 numeros </h1>
+    <p id="resultado"></p>
+    <script>
+    function perform() {
+        let e1 = prompt("Escriba el primer numero:");
+        if (e1 === null) {
+            document.getElementById("resultado").textContent = "Operacion cancelada por usuario";
+            return;
+        }
+        let e2 = prompt("Escriba el segundo numero:");
+        if (e2 === null) {
+            document.getElementById("resultado").textContent = "Operacion cancelada por usuario";
+            return;
+        }
+        let e3 = prompt("Escriba el tercer numero:");
+        if (e3 === null) {
+            document.getElementById("resultado").textContent = "Operacion cancelada por usuario";
+            return;
+        }
+        let n1 = parseFloat(e1);
+        let n2 = parseFloat(e2);
+        let n3 = parseFloat(e3);
+        if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+            document.getElementById("resultado").textContent = "Solo puedes ingresar valores numericos";
+            return;
+        }
+        let mayor = n1;
+        if (n2 > mayor) mayor = n2;
+        if (n3 > mayor) mayor = n3;
+        document.getElementById("resultado").textContent = "El numero mayor es :" +mayor;
+    }
+    perform();
+    </script>
+</body>
+</html>

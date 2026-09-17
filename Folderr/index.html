@@ -1,0 +1,39 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario con validacion</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="contenedor">
+    <h2>Registrar Producto</h2>
+    
+    <form id="formInventario">
+      <div class="grupo-input">
+        <label for="producto">Nombre Producto</label>
+        <input type="text" id="producto" placeholder="Ej: Teclado Mecanico"/>
+        <span class="errorProducto" id="errorProducto"></span>
+      </div>  
+      
+      <div class="grupo-input">
+        <label for="cantidad">Cantidad en Stock</label>
+        <input type="text" id="cantidad" placeholder="Ej: 10"/>
+        <span class="errorCantidad" id="errorCantidad"></span>
+      </div>
+    
+      <div class="grupo-input">
+        <label for="precio">Precio Unitario($)</label>
+        <input type="text" id="precio" placeholder="Ej: 10"/>
+        <span class="errorPrecio" id="errorPrecio"></span>
+      </div>
+      
+      <button type="submit">Guardar Producto</button>
+      <p id="mensajeExito" class="mensajeExito"></p>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
